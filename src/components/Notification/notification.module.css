@@ -1,0 +1,14 @@
+.notifications {
+  position: relative;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: 3px;
+  right: 30px;
+  display: block;
+  width: 0.9em;
+  height: 0.9em;
+  background: red;
+  border-radius: 50%;
+}

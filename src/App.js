@@ -1,6 +1,6 @@
 import React from "react";
 // app components
-import Nav from "./components/Nav";
+import Nav from "./containers/Nav";
 
 const App = () => {
   return (

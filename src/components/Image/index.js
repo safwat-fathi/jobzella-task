@@ -5,7 +5,7 @@ const index = ({ defaultSrc, mobSrc, tabSrc }) => {
     <picture>
       <source media="(min-width:650px)" srcSet={tabSrc} />
       <source media="(min-width:320px)" srcSet={mobSrc} />
-      <img src={defaultSrc} style={{ width: "100%" }} />
+      <img src={defaultSrc} alt="" style={{ width: "100%" }} />
     </picture>
   );
 };

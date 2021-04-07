@@ -1,0 +1,38 @@
+.btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: all 0.3s;
+}
+
+.size--lg {
+  padding: 1em 2em;
+  font-size: 3rem;
+}
+
+.size--sm {
+  padding: 0.5em 1.5em;
+  font-size: 1.4rem;
+}
+
+.primary {
+  background: red;
+  color: #ccc;
+}
+
+.secondary {
+  background: #ccc;
+  color: red;
+}
+
+.hover:hover {
+  filter: brightness(0.9);
+}
+
+.rounded--lg {
+  border-radius: 1em;
+}
+
+.rounded--sm {
+  border-radius: 0.6em;
+}
