@@ -20,7 +20,7 @@ import defLogo from "../../assets/images/logo512.png";
 // styles
 import styles from "./nav.module.css";
 
-const index = () => {
+const Nav = () => {
   return (
     <nav>
       <div className={styles.navbar}>
@@ -43,11 +43,13 @@ const index = () => {
             </Button>
           </Notification>
           {/* user name */}
-          <Typography variant="paragraph">user</Typography>
+          {/* <Typography color="secondary" variant="p">
+            user
+          </Typography> */}
         </div>
       </div>
     </nav>
   );
 };
 
-export default index;
+export default Nav;

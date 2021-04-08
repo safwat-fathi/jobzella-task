@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+}
+
+.card > * {
+  width: 100%;
+}
+
+.cardDesc {
+  text-align: start;
+}
+
+.cardAction {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cardAction > *:not(:last-child) {
+  margin-right: 1em;
+}
+.cardAction > *:nth-child(2) {
+  margin-right: auto;
+}

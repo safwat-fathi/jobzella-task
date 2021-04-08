@@ -1,4 +1,6 @@
 import React from "react";
+// prop-types package
+import PropTypes from "prop-types";
 // classnames package
 import cn from "classnames";
 // styles
@@ -16,8 +18,10 @@ const variantsMapping = {
   text: "p",
 };
 
-const index = ({ variant, color, children, ...props }) => {
+const Typography = ({ variant, color, children, ...props }) => {
   const Component = variant ? variantsMapping[variant] : "p";
+
+  console.log(Component);
 
   return (
     <Component
@@ -32,4 +36,9 @@ const index = ({ variant, color, children, ...props }) => {
   );
 };
 
-export default index;
+Typography.propTypes = {
+  variant: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
+};
+
+export default Typography;

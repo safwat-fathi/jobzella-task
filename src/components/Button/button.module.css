@@ -3,16 +3,23 @@
   background: transparent;
   border: none;
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn > *:not(:last-child) {
+  margin-right: 5px;
 }
 
 .size--lg {
-  padding: 1em 2em;
-  font-size: 3rem;
+  padding: 1rem 2rem;
+  font-size: 2rem;
 }
 
 .size--sm {
-  padding: 0.5em 1.5em;
-  font-size: 1.4rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
 }
 
 .primary {

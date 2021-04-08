@@ -1,10 +1,12 @@
 import React from "react";
+// prop-types package
+import PropTypes from "prop-types";
 // classnames package
 import cn from "classnames";
 // styles
 import styles from "./button.module.css";
 
-const index = ({
+const Button = ({
   type,
   size,
   hover,
@@ -23,7 +25,7 @@ const index = ({
         [styles["hover"]]: hover,
         [styles[`rounded--${roundedSize}`]]: roundedSize,
       })}
-      onClick={() => clickHandler()}
+      onClick={clickHandler}
       disabled={disabled}
       {...props}
     >
@@ -32,4 +34,14 @@ const index = ({
   );
 };
 
-export default index;
+Button.propTypes = {
+  type: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+  hover: PropTypes.bool,
+  disabled: PropTypes.bool,
+  roundedSize: PropTypes.string,
+  clickHandler: PropTypes.func,
+  children: PropTypes.element.isRequired,
+};
+
+export default Button;

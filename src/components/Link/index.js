@@ -2,7 +2,7 @@ import React from "react";
 // styles
 import styles from "./link.module.css";
 
-const NavLink = ({ to, children, ...props }) => {
+const Link = ({ to, children, ...props }) => {
   return (
     <>
       {/* only for demo */}
@@ -14,4 +14,4 @@ const NavLink = ({ to, children, ...props }) => {
   );
 };
 
-export default NavLink;
+export default Link;

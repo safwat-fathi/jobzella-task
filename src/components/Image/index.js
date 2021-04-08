@@ -1,6 +1,6 @@
 import React from "react";
 
-const index = ({ defaultSrc, mobSrc, tabSrc }) => {
+const Image = ({ defaultSrc, mobSrc, tabSrc }) => {
   return (
     <picture>
       <source media="(min-width:650px)" srcSet={tabSrc} />
@@ -10,4 +10,4 @@ const index = ({ defaultSrc, mobSrc, tabSrc }) => {
   );
 };
 
-export default index;
+export default Image;

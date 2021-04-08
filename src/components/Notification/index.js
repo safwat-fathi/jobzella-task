@@ -2,7 +2,7 @@ import React from "react";
 // styles
 import styles from "./notification.module.css";
 
-const index = ({ hasNewNotifications, children }) => {
+const Notification = ({ hasNewNotifications, children }) => {
   const NotificationBadge = () => {
     return <span className={styles.notificationBadge}></span>;
   };
@@ -15,4 +15,4 @@ const index = ({ hasNewNotifications, children }) => {
   );
 };
 
-export default index;
+export default Notification;

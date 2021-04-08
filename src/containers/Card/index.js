@@ -5,45 +5,59 @@ import { AiOutlineStar, AiOutlineShareAlt } from "react-icons/ai";
 import Image from "../../components/Image";
 import Typography from "../../components/Typography";
 import Button from "../../components/Button";
+// card assets
+import cardImg from "./image.jpg";
 // component styles
 import styles from "./card.module.css";
-// card image
-import cardImg from "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.thinkwebcontent.com%2Fproperty%2F26974%2F5394780%2F20200708053410%2Fw1920h1079%2Fs1600x1200%2Fx-147973920.jpg&f=1&nofb=1";
 
-const index = () => {
+const Card = () => {
   return (
     <div className={styles.card}>
       <div className={styles.cardImage}>
         <Image defaultSrc={cardImg} />
-        <Typography color="primary" variant="h4">
+      </div>
+      <div className={styles.cardDesc}>
+        {/* <Typography color="primary" variant="h4">
           Lorem ipsum dolor sit.
         </Typography>
         <Typography color="secondary" variant="h6">
           Lorem, ipsum dolor
         </Typography>
-        <Typography color="secondary" variant="p">
+        <Typography color="secondary" variant="text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. A eveniet
           optio est nihil aliquam eaque cupiditate illo, similique alias. Nisi
           consectetur esse eos accusamus hic voluptatibus aspernatur adipisci
           qui a.
-        </Typography>
-        <hr />
-        <div className={styles.cardAction}>
-          <Button size="sm" clickHandler={() => console.log("icon clicked")}>
-            <AiOutlineStar />
-            Save
-          </Button>
-          <Button size="sm" clickHandler={() => console.log("icon clicked")}>
-            <AiOutlineShareAlt />
-            Share
-          </Button>
-          <Button size="sm" clickHandler={() => console.log("icon clicked")}>
-            RENT
-          </Button>
-        </div>
+        </Typography> */}
+      </div>
+      <hr />
+      <div className={styles.cardAction}>
+        <Button
+          type="secondary"
+          size="sm"
+          clickHandler={() => console.log("Button clicked")}
+        >
+          <AiOutlineStar />
+          <span>Save</span>
+        </Button>
+        <Button
+          type="secondary"
+          size="sm"
+          clickHandler={() => console.log("Button clicked")}
+        >
+          <AiOutlineShareAlt />
+          <span>Share</span>
+        </Button>
+        <Button
+          size="lg"
+          type="primary"
+          clickHandler={() => console.log("Button clicked")}
+        >
+          RENT
+        </Button>
       </div>
     </div>
   );
 };
 
-export default index;
+export default Card;
