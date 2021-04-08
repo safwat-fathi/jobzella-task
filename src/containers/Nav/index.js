@@ -38,7 +38,11 @@ const Nav = () => {
         <div className={styles.navUserInfo}>
           {/* notification */}
           <Notification hasNewNotifications>
-            <Button size="sm" clickHandler={() => console.log("icon clicked")}>
+            <Button
+              type=""
+              size="sm"
+              clickHandler={() => console.log("icon clicked")}
+            >
               <AiTwotoneBell />
             </Button>
           </Notification>

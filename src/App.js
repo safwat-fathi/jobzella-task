@@ -1,7 +1,8 @@
 import React from "react";
-// app components
+// app containers
 import Nav from "./containers/Nav";
 import Card from "./containers/Card";
+import Footer from "./containers/Footer";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <section style={{ padding: "1em 2em" }}>
         <Card />
       </section>
+      <Footer />
     </div>
   );
 };

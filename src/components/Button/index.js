@@ -41,7 +41,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   roundedSize: PropTypes.string,
   clickHandler: PropTypes.func,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Button;
