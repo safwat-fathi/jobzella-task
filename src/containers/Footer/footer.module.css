@@ -1,10 +1,16 @@
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 2rem 1rem;
 }
 
 .logo {
   width: 10rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }

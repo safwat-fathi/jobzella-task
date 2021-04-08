@@ -1,6 +1,7 @@
 import React from "react";
 // app components
 import Image from "../../components/Image";
+import FooterLinks from "../../components/FooterLinks";
 // component styles
 import styles from "./footer.module.css";
 // assets
@@ -28,7 +29,7 @@ const links = {
       name: "General Link",
     },
   ],
-  help: [
+  helpLinks: [
     {
       url: "/exampleURL",
       name: "Help Link",
@@ -45,6 +46,10 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.logo}>
         <Image defaultSrc={defLogo} mobSrc={mobLogo} />
+      </div>
+      <div className={styles.links}>
+        <FooterLinks title="General" links={links.generalLinks} />
+        <FooterLinks title="Help" links={links.helpLinks} />
       </div>
     </div>
   );

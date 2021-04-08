@@ -10,7 +10,7 @@ import styles from "./footerLinks.module.css";
 const FooterLinks = ({ links, title }) => {
   return (
     <div className={styles.footerLinks}>
-      <Typography variant="h4" color="secondary">
+      <Typography variant="h4" color="primary">
         {title}
       </Typography>
       <ul className={styles.links}>
@@ -28,7 +28,7 @@ const FooterLinks = ({ links, title }) => {
 
 FooterLinks.propTypes = {
   title: PropTypes.string.isRequired,
-  links: PropTypes.object,
+  links: PropTypes.arrayOf(PropTypes.object),
   children: PropTypes.element.isRequired,
 };
 

@@ -17,7 +17,7 @@ const Card = () => {
         <Image defaultSrc={cardImg} />
       </div>
       <div className={styles.cardDesc}>
-        {/* <Typography color="primary" variant="h4">
+        <Typography color="primary" variant="h4">
           Lorem ipsum dolor sit.
         </Typography>
         <Typography color="secondary" variant="h6">
@@ -28,7 +28,7 @@ const Card = () => {
           optio est nihil aliquam eaque cupiditate illo, similique alias. Nisi
           consectetur esse eos accusamus hic voluptatibus aspernatur adipisci
           qui a.
-        </Typography> */}
+        </Typography>
       </div>
       <hr />
       <div className={styles.cardAction}>

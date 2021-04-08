@@ -1,7 +1,8 @@
 .footerLinks {
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .links {
@@ -9,4 +10,7 @@
   flex-flow: column;
   justify-content: space-between;
   align-items: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
