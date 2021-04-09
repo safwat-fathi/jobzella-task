@@ -10,7 +10,7 @@ import styles from "./footerLinks.module.css";
 const FooterLinks = ({ links, title }) => {
   return (
     <div className={styles.footerLinks}>
-      <Typography variant="h6" color="primary">
+      <Typography variant="h6" color="black">
         {title}
       </Typography>
       <ul className={styles.links}>

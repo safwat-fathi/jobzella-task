@@ -1,7 +1,7 @@
 /*  navigation styles
 ---------------------- */
 .navbar {
-  padding: 1em 2em;
+  padding: 0rem 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;

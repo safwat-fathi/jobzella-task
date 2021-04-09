@@ -50,6 +50,7 @@ const Card = () => {
         </Button>
         <Button
           size="lg"
+          roundedSize="lg"
           type="primary"
           clickHandler={() => console.log("Button clicked")}
         >
