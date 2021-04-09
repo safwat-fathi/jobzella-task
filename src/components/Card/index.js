@@ -2,9 +2,9 @@ import React from "react";
 // react icons
 import { AiOutlineStar, AiOutlineShareAlt } from "react-icons/ai";
 // app components
-import Image from "../../components/Image";
-import Typography from "../../components/Typography";
-import Button from "../../components/Button";
+import Image from "../Image";
+import Typography from "../Typography";
+import Button from "../Button";
 // card assets
 import cardImg from "./image.jpg";
 // component styles

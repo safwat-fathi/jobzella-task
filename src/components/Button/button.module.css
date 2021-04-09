@@ -23,13 +23,13 @@
 }
 
 .primary {
-  background: red;
-  color: #ccc;
+  background: #e26e8a;
+  color: #fff;
+  font-weight: bold;
 }
 
 .secondary {
-  background: #ccc;
-  color: red;
+  color: #a1a1a1;
 }
 
 .hover:hover {

@@ -1,8 +1,8 @@
 import React from "react";
-// app containers
-import Nav from "./containers/Nav";
-import Card from "./containers/Card";
-import Footer from "./containers/Footer";
+// app components
+import Nav from "./components/Nav";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (

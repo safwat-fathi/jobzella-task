@@ -1,5 +1,7 @@
 import React from "react";
-// styles
+// prop types package
+import PropTypes from "prop-types";
+// component styles
 import styles from "./link.module.css";
 
 const Link = ({ to, children, ...props }) => {
@@ -12,6 +14,11 @@ const Link = ({ to, children, ...props }) => {
       </a>
     </>
   );
+};
+
+Link.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Link;

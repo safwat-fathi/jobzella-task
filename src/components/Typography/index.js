@@ -21,8 +21,6 @@ const variantsMapping = {
 const Typography = ({ variant, color, children, ...props }) => {
   const Component = variant ? variantsMapping[variant] : "p";
 
-  console.log(Component);
-
   return (
     <Component
       className={cn({
@@ -38,7 +36,7 @@ const Typography = ({ variant, color, children, ...props }) => {
 
 Typography.propTypes = {
   variant: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Typography;

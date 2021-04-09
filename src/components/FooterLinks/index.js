@@ -10,13 +10,13 @@ import styles from "./footerLinks.module.css";
 const FooterLinks = ({ links, title }) => {
   return (
     <div className={styles.footerLinks}>
-      <Typography variant="h4" color="primary">
+      <Typography variant="h6" color="primary">
         {title}
       </Typography>
       <ul className={styles.links}>
-        {links.map((link) => {
+        {links.map((link, index) => {
           return (
-            <li>
+            <li key={index}>
               <Link to={link.url}>{link.name}</Link>
             </li>
           );
@@ -29,7 +29,6 @@ const FooterLinks = ({ links, title }) => {
 FooterLinks.propTypes = {
   title: PropTypes.string.isRequired,
   links: PropTypes.arrayOf(PropTypes.object),
-  children: PropTypes.element.isRequired,
 };
 
 export default FooterLinks;

@@ -3,15 +3,15 @@ import React from "react";
 import { AiTwotoneBell } from "react-icons/ai";
 /* app components */
 // notification
-import Notification from "../../components/Notification";
+import Notification from "../Notification";
 // typography
-import Typography from "../../components/Typography";
+import Typography from "../Typography";
 // button
-import Button from "../../components/Button";
+import Button from "../Button";
 // nav link
-import Link from "../../components/Link";
+import Link from "../Link";
 // img
-import Image from "../../components/Image";
+import Image from "../Image";
 // assets
 // source for mobile screens
 import mobLogo from "../../assets/images/logo192.png";
@@ -19,10 +19,12 @@ import mobLogo from "../../assets/images/logo192.png";
 import defLogo from "../../assets/images/logo512.png";
 // styles
 import styles from "./nav.module.css";
+// dummy data
+import { navLinks } from "../../data";
 
-const Nav = () => {
+const Nav = ({ links, user, notification, ...prop }) => {
   return (
-    <nav>
+    <nav {...prop}>
       <div className={styles.navbar}>
         {/* logo */}
         <div className={styles.logo}>
@@ -30,9 +32,15 @@ const Nav = () => {
         </div>
         {/* links */}
         <div className={styles.links}>
-          <Link to="/projects">Projects</Link>
-          <Link to="/community">Community</Link>
-          <Link to="/courses">Courses</Link>
+          {navLinks.map((link) => {
+            return (
+              <Link key={link.name} to={link.url}>
+                {link.name}
+              </Link>
+            );
+          })}
+          {/* <Link to="/community">Community</Link>
+          <Link to="/courses">Courses</Link> */}
         </div>
         {/* user section */}
         <div className={styles.navUserInfo}>
@@ -47,9 +55,9 @@ const Nav = () => {
             </Button>
           </Notification>
           {/* user name */}
-          {/* <Typography color="secondary" variant="p">
+          <Typography color="black" variant="subheading">
             user
-          </Typography> */}
+          </Typography>
         </div>
       </div>
     </nav>
