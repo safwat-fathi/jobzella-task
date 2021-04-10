@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 // react icons
 import { AiOutlineStar, AiOutlineShareAlt } from "react-icons/ai";
 // app components
@@ -11,6 +11,10 @@ import cardImg from "./image.jpg";
 import styles from "./card.module.css";
 
 const Card = () => {
+  const saveBtn = useRef(null);
+  const shareBtn = useRef(null);
+  const rentBtn = useRef(null);
+
   return (
     <div className={styles.card}>
       <div className={styles.cardImage}>
@@ -33,6 +37,7 @@ const Card = () => {
       <hr />
       <div className={styles.cardAction}>
         <Button
+          ref={saveBtn}
           type="secondary"
           size="sm"
           clickHandler={() => console.log("Button clicked")}
@@ -41,6 +46,7 @@ const Card = () => {
           <span>Save</span>
         </Button>
         <Button
+          ref={shareBtn}
           type="secondary"
           size="sm"
           clickHandler={() => console.log("Button clicked")}
@@ -49,6 +55,7 @@ const Card = () => {
           <span>Share</span>
         </Button>
         <Button
+          ref={rentBtn}
           size="lg"
           roundedSize="lg"
           type="primary"
