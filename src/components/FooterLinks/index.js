@@ -1,5 +1,5 @@
 import React from "react";
-// prop-types package
+// prop-types
 import PropTypes from "prop-types";
 // app components
 import Typography from "../Typography";

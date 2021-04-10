@@ -58,6 +58,14 @@
   color: #a1a1a1;
 }
 
+.color--success {
+  color: #3f6327;
+}
+
+.color--error {
+  color: #692525;
+}
+
 .color--black {
   color: black;
 }

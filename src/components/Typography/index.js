@@ -14,7 +14,6 @@ const variantsMapping = {
   h5: "h5",
   h6: "h6",
   subheading: "h6",
-  paragraph: "p",
   text: "p",
 };
 

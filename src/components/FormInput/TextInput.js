@@ -1,6 +1,8 @@
 import React, { forwardRef, useEffect } from "react";
 // prop-types package
 import PropTypes from "prop-types";
+// app components
+import Typography from "../Typography";
 
 const TextInput = forwardRef(
   (
@@ -34,7 +36,11 @@ const TextInput = forwardRef(
           style={error && { border: "solid 1px red" }}
           {...props}
         />
-        {error && <p>{error}</p>}
+        {error && (
+          <Typography variant="text" color="error">
+            {error}
+          </Typography>
+        )}
       </>
     );
   }

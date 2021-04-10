@@ -1,16 +1,16 @@
 import React, { useRef } from "react";
+// prop-types package
+import PropTypes from "prop-types";
 // react icons
 import { AiOutlineStar, AiOutlineShareAlt } from "react-icons/ai";
 // app components
 import Image from "../Image";
 import Typography from "../Typography";
 import Button from "../Button";
-// card assets
-import cardImg from "./image.jpg";
 // component styles
 import styles from "./card.module.css";
 
-const Card = () => {
+const Card = ({ img, heading, subheading, description }) => {
   const saveBtn = useRef(null);
   const shareBtn = useRef(null);
   const rentBtn = useRef(null);
@@ -18,20 +18,17 @@ const Card = () => {
   return (
     <div className={styles.card}>
       <div className={styles.cardImage}>
-        <Image defaultSrc={cardImg} />
+        <Image defaultSrc={img} />
       </div>
       <div className={styles.cardDesc}>
         <Typography color="primary" variant="h4">
-          Lorem ipsum dolor sit.
+          {heading}
         </Typography>
         <Typography color="secondary" variant="h6">
-          Lorem, ipsum dolor
+          {subheading}
         </Typography>
         <Typography color="secondary" variant="text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. A eveniet
-          optio est nihil aliquam eaque cupiditate illo, similique alias. Nisi
-          consectetur esse eos accusamus hic voluptatibus aspernatur adipisci
-          qui a.
+          {description}
         </Typography>
       </div>
       <hr />
@@ -40,7 +37,7 @@ const Card = () => {
           ref={saveBtn}
           type="secondary"
           size="sm"
-          clickHandler={() => console.log("Button clicked")}
+          clickHandler={() => console.log(`${saveBtn.current} clicked`)}
         >
           <AiOutlineStar />
           <span>Save</span>
@@ -66,6 +63,13 @@ const Card = () => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  img: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  subheading: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default Card;
