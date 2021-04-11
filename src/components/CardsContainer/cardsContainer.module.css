@@ -5,3 +5,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+.container > * {
+  margin: 0 auto 3rem 0;
+}

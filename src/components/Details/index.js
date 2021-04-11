@@ -10,7 +10,7 @@ import Button from "../Button";
 // styles
 import styles from "./details.module.css";
 
-const Details = ({ heading, subheading, img, description, location }) => {
+const Details = ({ location }) => {
   const { state } = location;
 
   return (
@@ -61,13 +61,6 @@ const Details = ({ heading, subheading, img, description, location }) => {
       </div>
     </div>
   );
-};
-
-Details.propTypes = {
-  heading: PropTypes.string.isRequired,
-  subheading: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
 };
 
 export default Details;

@@ -76,3 +76,14 @@ export const cards = [
       "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.",
   },
 ];
+
+export const languages = [
+  {
+    value: "AR",
+    label: "Arabic",
+  },
+  {
+    value: "EN",
+    label: "English",
+  },
+];
