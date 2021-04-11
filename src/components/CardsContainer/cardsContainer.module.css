@@ -1,0 +1,7 @@
+.container {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}

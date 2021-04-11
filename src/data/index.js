@@ -1,3 +1,5 @@
+import cardImg from "../assets/images/cardImage.jpg";
+
 export const footerLinks = {
   generalLinks: [
     {
@@ -41,5 +43,36 @@ export const navLinks = [
   {
     url: "/exampleURL",
     name: "Courses",
+  },
+];
+
+export const cards = [
+  {
+    img: cardImg,
+    heading: "Lorem Ipsum",
+    subheading: "Lorem Ipsum, dolor",
+    description:
+      "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.",
+  },
+  {
+    img: cardImg,
+    heading: "Lorem Ipsum",
+    subheading: "Lorem Ipsum, dolor",
+    description:
+      "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.",
+  },
+  {
+    img: cardImg,
+    heading: "Lorem Ipsum",
+    subheading: "Lorem Ipsum, dolor",
+    description:
+      "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.",
+  },
+  {
+    img: cardImg,
+    heading: "Lorem Ipsum",
+    subheading: "Lorem Ipsum, dolor",
+    description:
+      "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.",
   },
 ];

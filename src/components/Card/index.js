@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 // prop-types package
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 // react icons
 import { AiOutlineStar, AiOutlineShareAlt } from "react-icons/ai";
 // app components
@@ -10,11 +11,7 @@ import Button from "../Button";
 // component styles
 import styles from "./card.module.css";
 
-const Card = ({ img, heading, subheading, description }) => {
-  const saveBtn = useRef(null);
-  const shareBtn = useRef(null);
-  const rentBtn = useRef(null);
-
+const Card = ({ id, img, heading, subheading, description }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardImage}>
@@ -34,16 +31,14 @@ const Card = ({ img, heading, subheading, description }) => {
       <hr />
       <div className={styles.cardAction}>
         <Button
-          ref={saveBtn}
           type="secondary"
           size="sm"
-          clickHandler={() => console.log(`${saveBtn.current} clicked`)}
+          clickHandler={() => console.log(`saveBtn clicked`)}
         >
           <AiOutlineStar />
           <span>Save</span>
         </Button>
         <Button
-          ref={shareBtn}
           type="secondary"
           size="sm"
           clickHandler={() => console.log("Button clicked")}
@@ -52,13 +47,19 @@ const Card = ({ img, heading, subheading, description }) => {
           <span>Share</span>
         </Button>
         <Button
-          ref={rentBtn}
           size="lg"
           roundedSize="lg"
           type="primary"
           clickHandler={() => console.log("Button clicked")}
         >
-          RENT
+          <Link
+            to={{
+              pathname: `/details/${id}`,
+              state: { id, img, heading, subheading, description },
+            }}
+          >
+            RENT
+          </Link>
         </Button>
       </div>
     </div>
@@ -66,6 +67,7 @@ const Card = ({ img, heading, subheading, description }) => {
 };
 
 Card.propTypes = {
+  id: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   subheading: PropTypes.string.isRequired,

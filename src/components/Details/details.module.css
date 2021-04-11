@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* padding: 1rem 2rem; */
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 2rem;
+}
