@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 // app components
 import Image from "../Image";
 import FooterLinks from "../FooterLinks";
@@ -14,6 +14,8 @@ import defLogo from "../../assets/images/logo512.png";
 import { footerLinks, languages } from "../../data";
 
 const Footer = () => {
+  const selectInput = useRef(null);
+
   return (
     <div className={styles.footer}>
       <div className={styles.logo}>
@@ -25,9 +27,11 @@ const Footer = () => {
       </div>
       <div className={styles.language}>
         <SelectInput
+          ref={selectInput}
           name="lang"
           options={languages}
           placeholder="Select language"
+          onChange={() => console.log("selectInput changed")}
         />
       </div>
     </div>

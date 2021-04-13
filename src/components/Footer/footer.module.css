@@ -7,6 +7,9 @@
 .footer > *:first-child {
   margin-right: 2rem;
 }
+.footer > *:nth-child(2) {
+  margin-right: auto;
+}
 
 .logo {
   width: 10rem;
